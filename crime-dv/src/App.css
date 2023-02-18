@@ -34,9 +34,13 @@ p {
   padding: 50px;
 }
 
+.visual {
+  aspect-ratio: 16 / 9;
+}
+
 .data-vis {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
