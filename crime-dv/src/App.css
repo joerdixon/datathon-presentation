@@ -7,10 +7,16 @@ body {
 
 .bulk-text {
   font-size: 1.5rem;
+  font-family: "Poppins";
 }
 
 .heading {
   font-size: 3rem;
   width: 100%;
+  font-family: "Poppins";
 }
 
+.infographic {
+  width: 100%;
+  height: 100%
+}

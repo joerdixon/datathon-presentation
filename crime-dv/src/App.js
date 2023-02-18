@@ -11,7 +11,7 @@ function App() {
     <ScrollContainer snap='mandatory'>
       {/* Page 1 */}
       <ScrollPage>
-        <Animator animation={ZoomInScrollOut}>
+        <Animator class='wide-ani' animation={ZoomInScrollOut}>
           <h1 className='heading'>We have more data then ever on crime in Seattle</h1>
         </Animator>
       </ScrollPage>
