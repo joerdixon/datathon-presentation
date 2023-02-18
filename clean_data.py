@@ -27,6 +27,9 @@ def main():
     df_dropped[:df_dropped.shape[0]//2].to_csv(write_p1, float_format='%.3f', index=False)
     df_dropped[df_dropped.shape[0]//2:].to_csv(write_p2, float_format='%.3f', index=False)
     df_dropped_tenth.to_csv(write_tenth, float_format='%.3f', index=False)
+    # df['Year'] = [x[6:11] for x in df['Offense Start DateTime'].to_numpy()]
+    # df.to_csv(write_tenth, float_format='%.3f', index=False)
+    # print(df)
 
 def print_data_stats(df, df_min):
     print(f'Data sample first 5 (full): {df[:5]} \n Data columns (full):\
