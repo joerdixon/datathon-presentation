@@ -5,29 +5,55 @@ function App() {
 
   const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
   const FadeUp = batch(Fade(), Move(1, 500), Sticky());
-  const FadeRight = batch(Fade())
+  const FadeRight = batch(Fade());
 
   return (
     <ScrollContainer snap='mandatory'>
-      {/* Page 1 */}
+      {/* Introduction and Objective */}
       <ScrollPage>
         <Animator class='wide-ani' animation={ZoomInScrollOut}>
-          <h1 className='heading'>We have more data then ever on crime in Seattle</h1>
+          <h1 className='heading'>We have more data then ever on crime in <span id='pop-text'>Seattle</span></h1>
         </Animator>
       </ScrollPage>
-      {/* Page 2 */}
+      {/* Question 1 */}
       <ScrollPage>
         <Animator animation={FadeUp}>
-          <a href="https://placeholder.com"><img src="https://via.placeholder.com/1000" alt='placeholder image for data vis'/></a>
+          <div class='question-container'>
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/500" alt='placeholder image for data vis' /></a>
+            <div className='question-text'>
+              <h1>How has the crime rate changed since 2008?</h1>
+              <h2>Data Used:</h2>
+              <ul>
+                <li>Total Crimes</li>
+                <li>Crimes per Year</li>
+                <li>Crime Type</li>
+              </ul>
+            </div>
+          </div>
         </Animator>
       </ScrollPage>
-      {/* Page 3 */}
+      {/* Question 2 */}
       <ScrollPage>
         <Animator animation={FadeUp}>
-          <span>Welcome</span>
+          <div className='question-container'>
+            <div className='.vis-caption'>
+              <div>
+                Crimes over Time:
+              </div>
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/200" alt='placeholder image for data vis' /></a>
+            </div>
+            <div className='.vis-caption'>
+              <div>
+                Crimes Types over Time:
+              </div>
+              <a href="https://placeholder.com"><img src="https://via.placeholder.com/200" alt='placeholder image for data vis' /></a>
+            </div>
+
+          </div>
+
         </Animator>
       </ScrollPage>
-      {/* Page 4 */}
+      {/* Question 3*/}
       <ScrollPage>
         <Animator animation={FadeUp}>
           <span>To Rainbow Connection</span>
