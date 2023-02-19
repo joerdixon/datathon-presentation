@@ -4,7 +4,7 @@ import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Mo
 
 // Images
 import Q1plot1 from "./assets/crimerateper100k.png"
-import Q1plot2 from "./assets/top5crimesperyear.png"
+import Q1plot2 from "./assets/top5crimesbyyear.jpg"
 
 // Animations
 const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
@@ -64,17 +64,18 @@ function Slides() {
                     <div className='data-vis '>
                         <figure>
                             {/* Image */}
-                            <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1300px' height='100%' src={Q1plot1} /></a>
+                            <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1000px' height='100%' src={Q1plot1} /></a>
                         </figure>
                     </div>
                 </Animator>
             </ScrollPage>
+            {/* Plot 2 */}
             <ScrollPage>
                 <Animator animation={SlideUp}>
-                <div className='data-vis '>
+                    <div className='data-vis '>
                         <figure>
                             {/* Image */}
-                            <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1300px' height='100%' src={Q1plot1} /></a>
+                            <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1000px' height='100%' src={Q1plot2} /></a>
                         </figure>
                     </div>
                 </Animator>
@@ -95,103 +96,89 @@ function Slides() {
             </ScrollPage>
             {/* Question 2 */}
             <ScrollPage>
-                <Animator animation={SlideUpScrollUp}>
+                <Animator animation={SlideRight}>
                     <div class='question-container'>
                         <div className='question-text'>
-                            <h1>What are the geographic hotspots for crime  ?</h1>
+                            <h1>What are the geographic hotspots for crime?</h1>
                         </div>
                     </div>
                 </Animator>
             </ScrollPage>
-            {/* Plots */}
+            {/* Data Used */}
             <ScrollPage>
-                <Animator animation={SlideUpScrollUp}>
-                    <div className='data-vis '>
-                        {/* Data Visualization */}
-                        <figure>
-                            {/* Caption */}
-                            <p>Crimes over Time:</p>
-                            {/* Visualizaiton */}
-                            <img className='visual' src="https://via.placeholder.com/500" alt='placeholder image for data vis' />
-                        </figure>
-                        {/* Conclusions/Observations */}
-                        <div>
-                            <h1>Observations:</h1>
-                            <ul>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                            </ul>
-                        </div>
-                    </div>
+                <Animator animation={ZoomInScrollOut}>
+                    <h1>Data Used:</h1>
+                    <ul>
+                        <li>Supplemented our SPD Crime dataset from the original Seattle Government API</li>
+                        <li>Manipulated geojson data (choropleth map) to draw the borders of the seattle neighborhoods in relation to the latitude and longitude from SPD Crime data</li>
+                        <li>Mapped points of high crime occurrence in each neighborhood with a further filter the user can apply to view their neighborhood in any period 2008 - 2023</li>
+                    </ul>
                 </Animator>
             </ScrollPage>
-            {/* Takeaways */}
+            {/* Crime Map */}
             <ScrollPage>
-                <Animator animation={SlideUpScrollUp}>
-                    <div className='conclusions' id='from-map'>
-                        <h1 className='heading'>Takeaways:</h1>
-                        <p>Covid Increased Crime</p>
-                        <p>Seattle's crime increased the most</p>
-                        <p>Theft rose by 300%</p>
-                    </div>
-                </Animator>
-            </ScrollPage>
-            {/* Question 3 */}
-            <ScrollPage>
-                <Animator animation={SlideUpScrollUp}>
-                    <div class='question-container'>
-                        <div className='question-text'>
-                            <h1>How has the crime rate changed since 2008?</h1>
-                        </div>
-                    </div>
-                </Animator>
-            </ScrollPage>
-            {/* Plots */}
-            <ScrollPage>
-                <Animator animation={SlideUpScrollUp}>
-                    <div className='data-vis '>
-                        {/* Data Visualization */}
-                        <figure>
-                            {/* Caption */}
-                            <p>Crimes over Time:</p>
-                            {/* Visualizaiton */}
-                            <img className='visual' src="https://via.placeholder.com/500" alt='placeholder image for data vis' />
-                        </figure>
-                        {/* Conclusions/Observations */}
-                        <div>
-                            <h1>Observations:</h1>
-                            <ul>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                                <li>Seattle saw the most sharp increase in crime</li>
-                            </ul>
-                        </div>
-                    </div>
-                </Animator>
-            </ScrollPage>
-            {/* Takeaways */}
-            <ScrollPage>
-                <Animator animation={SlideUpScrollUp}>
-                    <div className='conclusions' id='from-map'>
-                        <h1 className='heading'>Takeaways:</h1>
-                        <p>Covid Increased Crime</p>
-                        <p>Seattle's crime increased the most</p>
-                        <p>Theft rose by 300%</p>
-                    </div>
-                </Animator>
-            </ScrollPage>
-            {/* Map */}
-            <ScrollPage>
-                <Animator animation={SlideUpScrollUp}>
-                    <a href="">
-                        <button id='exit-map'>Restart</button>
-                    </a>
+                <Animator animation={SlideUp}>
                     <iframe src="https://tu21897.github.io/datathon-crime-map/"></iframe>
+                </Animator>
+            </ScrollPage>
+            {/* Conclusions/Observations */}
+            <ScrollPage>
+                <Animator animation={SlideUp}>
+                    <div className='text-center'>
+                        <h1>Takeaways:</h1>
+                        <p>
+                        The neighborhood map of crime helps us visualize where the crimes are happening. It also allows us to explore which time periods had the most occurrences of crime. 
+                        <br></br>
+                        <br></br>
+                        At a broad scale, it is visually very easy for users to grasp, making it advantageous in increasing understanding of Seattle crime. 
+                        <br></br>
+                        <br></br>
+                        In the next section, we will show graphical representations of these fluctuations in crime occurrences. 
+                        </p>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            {/* Question 2 */}
+            <ScrollPage>
+                <Animator animation={SlideRight}>
+                    <div class='question-container'>
+                        <div className='question-text'>
+                            <h1>So what can we observe with respect to the frequency of offenses within a hotspot?</h1>
+                        </div>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            {/* Data Used */}
+            <ScrollPage>
+                <Animator animation={ZoomInScrollOut}>
+                    <h1>Data Used:</h1>
+                    <ul>
+                        <li>We used a sample of the original clean dataset as its smaller size allowed for an easier process.</li>
+                        <li>In making the sample subset a random “shuffled” tenth of the original clean dataset, we also avoided any sampling bias in order to convey trends that are representative of the entire dataset.</li>
+                    </ul>
+                </Animator>
+            </ScrollPage>
+            {/* Crime Map */}
+            <ScrollPage>
+                <Animator animation={SlideUp}>
+                    <iframe src="https://tu21897.github.io/datathon-crime-map/"></iframe>
+                </Animator>
+            </ScrollPage>
+            {/* Conclusions/Observations */}
+            <ScrollPage>
+                <Animator animation={SlideUp}>
+                    <div className='text-center'>
+                        <h1>Takeaways:</h1>
+                        <p>
+                        The neighborhood map of crime helps us visualize where the crimes are happening. It also allows us to explore which time periods had the most occurrences of crime. 
+                        <br></br>
+                        <br></br>
+                        At a broad scale, it is visually very easy for users to grasp, making it advantageous in increasing understanding of Seattle crime. 
+                        <br></br>
+                        <br></br>
+                        In the next section, we will show graphical representations of these fluctuations in crime occurrences. 
+                        </p>
+                    </div>
                 </Animator>
             </ScrollPage>
         </ScrollContainer>
