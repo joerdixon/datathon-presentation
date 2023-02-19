@@ -73,7 +73,7 @@ function Slides() {
             <ScrollPage>
                 <Animator animation={FadeUp}>
                     <iframe width="1600" height="900"
-                        src="https://tu21897.github.io/crime-data/">
+                        src="https://tu21897.github.io/datathon-crime-map/">
                     </iframe>
                 </Animator>
             </ScrollPage>
