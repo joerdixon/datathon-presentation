@@ -1,13 +1,7 @@
+/* Element Styling */
 body {
   background-color: #111;
   color: white;
-}
-
-/* Font Styling */
-
-.bulk-text {
-  font-size: 1.5rem;
-  font-family: "Poppins";
 }
 
 h1 {
@@ -16,15 +10,19 @@ h1 {
   text-align: center;
 }
 
-.infographic {
-  margin: 50px;
+p {
+  font-size: 1.5rem;
+  font-family: "Poppins";
 }
+
+/* Class Styling */
 
 .pop-text {
   color: pink;
 }
 
-/* Each question slide should be in this format */
+/* ID Styling */
+
 .question-container {
   display: flex;
   justify-content: space-evenly;
@@ -36,9 +34,13 @@ h1 {
   padding: 50px;
 }
 
+.visual {
+  aspect-ratio: 16 / 9;
+}
+
 .data-vis {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
