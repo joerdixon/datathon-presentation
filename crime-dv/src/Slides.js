@@ -48,7 +48,7 @@ function Slides() {
                             {/* Caption */}
                             <p>Crimes over Time:</p>
                             {/* Visualizaiton */}
-                            <img className='visual' src="https://via.placeholder.com/500" alt='placeholder image for data vis' />
+                            <img className='visual' src="" />
                         </figure>
                         {/* Conclusions/Observations */}
                         <div>
