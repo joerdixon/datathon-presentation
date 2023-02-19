@@ -22,7 +22,7 @@ function Slides() {
         <ScrollContainer snap='mandatory'>
             {/* Introduction and Objective */}
             <ScrollPage id="top">
-                <Animator class='wide-ani' animation={ZoomInScrollOut}>
+                <Animator class='wide-ani' animation={SlideUpScrollUp}>
                     <h1 className='heading'>We have more data than ever on crime in <span className='pop-text'>Seattle</span>.</h1>
                 </Animator>
             </ScrollPage>
@@ -48,7 +48,7 @@ function Slides() {
             </ScrollPage>
             {/* Data Used */}
             <ScrollPage>
-                <Animator animation={ZoomInScrollOut}>
+                <Animator animation={SlideUpScrollUp}>
                     <h1>Data Used:</h1>
                     <ul>
                         <li>SPD Crime Data with additional year column derived from DateTime objects acting as a flag for further grouping.</li>
@@ -109,7 +109,7 @@ function Slides() {
             </ScrollPage>
             {/* Data Used */}
             <ScrollPage>
-                <Animator animation={ZoomInScrollOut}>
+                <Animator animation={SlideUpScrollUp}>
                     <h1>Data Used:</h1>
                     <ul>
                         <li>Supplemented our SPD Crime dataset from the original <a href='
@@ -121,7 +121,7 @@ https://dev.socrata.com/foundry/data.seattle.gov/tazs-3rd5' target='_blank' clas
             </ScrollPage>
             {/* Map Instructions */}
             <ScrollPage>
-                <Animator animation={ZoomInScrollOut}>
+                <Animator animation={SlideUpScrollUp}>
                     <h1>Using the Map</h1>
                     <p>
                         Click and drag to navigate, scroll outside of the container to continue the presentation.
@@ -169,7 +169,7 @@ https://dev.socrata.com/foundry/data.seattle.gov/tazs-3rd5' target='_blank' clas
             </ScrollPage>
             {/* Data Used */}
             <ScrollPage>
-                <Animator animation={ZoomInScrollOut}>
+                <Animator animation={SlideRight}>
                     <h1>Data Used:</h1>
                     <ul>
                         <li>We used a sample of the original clean dataset as its smaller size allowed for an easier process.</li>
@@ -210,7 +210,7 @@ https://dev.socrata.com/foundry/data.seattle.gov/tazs-3rd5' target='_blank' clas
             </ScrollPage>
             {/* Final Conclusion */}
             <ScrollPage>
-                <Animator animation={SlideUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <h1>Final Thoughts</h1>
                     <p className='text-center'>
                         Through our data analysis and visualization on the SPD dataset, we have observed how the frequency and location of crime fluctuates in Seattle over time.
