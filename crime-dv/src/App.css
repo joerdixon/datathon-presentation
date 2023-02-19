@@ -55,6 +55,16 @@ iframe {
   height: auto;
 }
 
+.tableau-link {
+  color: pink;
+}
+
+.tableau-text {
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+} 
+
 .conclusions {
   text-align: left;
 }

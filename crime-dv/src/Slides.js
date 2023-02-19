@@ -68,6 +68,7 @@ function Slides() {
                             <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1000px' height='100%' src={Q1plot1} /></a>
                         </figure>
                     </div>
+                    <p className='tableau-text'>Click <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target='_blank' className='tableau-link'>here</a> to check out the Tableau dashboard (Highly Recommended)</p>
                 </Animator>
             </ScrollPage>
             {/* Plot 2 */}
@@ -79,6 +80,7 @@ function Slides() {
                             <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1000px' height='100%' src={Q1plot2} /></a>
                         </figure>
                     </div>
+                    <p className='tableau-text'>Click <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target='_blank' className='tableau-link'>here</a> to check out the Tableau dashboard (Highly Recommended)</p>
                 </Animator>
             </ScrollPage>
             {/* Conclusions/Observations */}
@@ -110,7 +112,8 @@ function Slides() {
                 <Animator animation={ZoomInScrollOut}>
                     <h1>Data Used:</h1>
                     <ul>
-                        <li>Supplemented our SPD Crime dataset from the original Seattle Government API</li>
+                        <li>Supplemented our SPD Crime dataset from the original <a href='
+https://dev.socrata.com/foundry/data.seattle.gov/tazs-3rd5' target='_blank' className='tableau-link'>Seattle Government API</a></li>
                         <li>Manipulated geojson data (choropleth map) to draw the borders of the seattle neighborhoods in relation to the latitude and longitude from SPD Crime data</li>
                         <li>Mapped points of high crime occurrence in each neighborhood with a further filter the user can apply to view their neighborhood in any period 2008 - 2023</li>
                     </ul>
@@ -124,10 +127,10 @@ function Slides() {
                         Click and drag to navigate, scroll outside of the container to continue the presentation.
                         <br></br>
                         <br></br>
-                        In the bottom left, choose the type of crime you want to explore from the dropdown menu and select a timeframe from the calendar widget. 
+                        In the bottom left, choose the type of crime you want to explore from the dropdown menu and select a timeframe from the calendar widget.
                         <br></br>
                         <br></br>
-                        Then, click on the neighborhoods of interest. The count of your selected offense will appear next to the offense dropdown menu. 
+                        Then, click on the neighborhoods of interest. The count of your selected offense will appear next to the offense dropdown menu.
                     </p>
                 </Animator>
             </ScrollPage>
@@ -176,13 +179,15 @@ function Slides() {
             </ScrollPage>
             {/* Crime Map */}
             <ScrollPage>
-                <div className='data-vis'>
-                    <figure id='question3'>
-                        {/* Image */}
-                        <a href='https://public.tableau.com/views/seattle_crime/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link' target="_blank"><img width='1000px' height='100%' src={Q2plot1} /></a>
-                    </figure>
-                    {/* Image */}
-                </div>
+                <Animator animation={SlideUp}>
+                    <div className='data-vis '>
+                        <figure>
+                            {/* Image */}
+                            <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1000px' height='100%' src={Q2plot1} /></a>
+                        </figure>
+                    </div>
+                    <p className='tableau-text'>Click <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target='_blank' className='tableau-link'>here</a> to check out the Tableau dashboard (Highly Recommended)</p>
+                </Animator>
             </ScrollPage>
             {/* Conclusions/Observations */}
             <ScrollPage>
@@ -212,7 +217,7 @@ function Slides() {
                         Through our data analysis and visualization on the SPD dataset, we have observed how the frequency and location of crime fluctuates in Seattle over time.
                         <br></br>
                         <br></br>
-                        For residents of Seattle neighborhoods, having current crime data is very helpful. It provides a crucial understanding of what is happening in their area of Seattle and what precautions should be taken to lessen the probability of these crimes happening. 
+                        For residents of Seattle neighborhoods, having current crime data is very helpful. It provides a crucial understanding of what is happening in their area of Seattle and what precautions should be taken to lessen the probability of these crimes happening.
                         <br></br>
                         <br></br>
                         In a city where the crime rate is growing rampantly, this awareness of frequency by location is imperative, especially when deciding to buy a house, start a business or just move to Seattle. Overall, our insights help the average Seattleite navigate the city and their neighborhood with greater safety.
