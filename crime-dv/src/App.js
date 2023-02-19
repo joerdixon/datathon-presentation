@@ -1,4 +1,5 @@
 import './App.css';
+import Map from  './Map.js';
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 function App() {
@@ -73,6 +74,9 @@ function App() {
             <p className='bulk-text'>Theft rose by 300%</p>
           </div>
         </Animator>
+      </ScrollPage>
+      <ScrollPage>
+        <Map/>
       </ScrollPage>
     </ScrollContainer>
   );
