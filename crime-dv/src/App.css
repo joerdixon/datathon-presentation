@@ -63,6 +63,13 @@ iframe {
   text-align: center;
 }
 
+#question3 {
+  margin: 0 auto;
+  padding-top: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+
 #exit-map {
   width: 90px;
   height: 35px;

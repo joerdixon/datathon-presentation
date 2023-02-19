@@ -5,6 +5,7 @@ import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Mo
 // Images
 import Q1plot1 from "./assets/crimerateper100k.png"
 import Q1plot2 from "./assets/top5crimesbyyear.jpg"
+import Q2plot1 from "./assets/q2plot2.png"
 
 // Animations
 const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
@@ -22,7 +23,7 @@ function Slides() {
             {/* Introduction and Objective */}
             <ScrollPage id="top">
                 <Animator class='wide-ani' animation={ZoomInScrollOut}>
-                    <h1 className='heading'>We have more data then ever on crime in <span className='pop-text'>Seattle</span>.</h1>
+                    <h1 className='heading'>We have more data than ever on crime in <span className='pop-text'>Seattle</span>.</h1>
                 </Animator>
             </ScrollPage>
             <ScrollPage>
@@ -32,7 +33,7 @@ function Slides() {
             </ScrollPage>
             <ScrollPage>
                 <Animator class='wide-ani' animation={SlideUp}>
-                    <h1 className='heading'>Lets look at the <span className='pop-text'>data</span>.</h1>
+                    <h1 className='heading'>Let's look at the <span className='pop-text'>data</span>.</h1>
                 </Animator>
             </ScrollPage>
             {/* Question 1 */}
@@ -127,13 +128,13 @@ function Slides() {
                     <div className='text-center'>
                         <h1>Takeaways:</h1>
                         <p>
-                        The neighborhood map of crime helps us visualize where the crimes are happening. It also allows us to explore which time periods had the most occurrences of crime. 
-                        <br></br>
-                        <br></br>
-                        At a broad scale, it is visually very easy for users to grasp, making it advantageous in increasing understanding of Seattle crime. 
-                        <br></br>
-                        <br></br>
-                        In the next section, we will show graphical representations of these fluctuations in crime occurrences. 
+                            The neighborhood map of crime helps us visualize where the crimes are happening. It also allows us to explore which time periods had the most occurrences of crime.
+                            <br></br>
+                            <br></br>
+                            At a broad scale, it is visually very easy for users to grasp, making it advantageous in increasing understanding of Seattle crime.
+                            <br></br>
+                            <br></br>
+                            In the next section, we will show graphical representations of these fluctuations in crime occurrences.
                         </p>
                     </div>
                 </Animator>
@@ -160,9 +161,13 @@ function Slides() {
             </ScrollPage>
             {/* Crime Map */}
             <ScrollPage>
-                <Animator animation={SlideUp}>
-                    <iframe src="https://tu21897.github.io/datathon-crime-map/"></iframe>
-                </Animator>
+                <div className='data-vis'>
+                    <figure id='question3'>
+                        {/* Image */}
+                        <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1000px' height='100%' src={Q2plot1} /></a>
+                    </figure>
+                    {/* Image */}
+                </div>
             </ScrollPage>
             {/* Conclusions/Observations */}
             <ScrollPage>
@@ -170,13 +175,16 @@ function Slides() {
                     <div className='text-center'>
                         <h1>Takeaways:</h1>
                         <p>
-                        The neighborhood map of crime helps us visualize where the crimes are happening. It also allows us to explore which time periods had the most occurrences of crime. 
-                        <br></br>
-                        <br></br>
-                        At a broad scale, it is visually very easy for users to grasp, making it advantageous in increasing understanding of Seattle crime. 
-                        <br></br>
-                        <br></br>
-                        In the next section, we will show graphical representations of these fluctuations in crime occurrences. 
+                            By grouping offense groups by neighborhoods, we were able to look at the top three commonly occurring crimes in each neighborhood: larceny/theft, burglary/breaking & entering, and motor vehicle theft.
+                            <br></br>
+                            <br></br>
+                            Next, evaluating the top three crimes per neighborhood on a yearly basis, the most frequent types of crimes have not changed, but the amount of crime, regardless of specific offense, has increased every year.
+                            <br></br>
+                            <br></br>
+                            Northgate, Queen Anne, Downtown, Commercial District, and University District are reported to have the most crime over all the years. 
+                            <br></br>
+                            <br></br>
+                            When selecting a neighborhood, the dashboard also provides a seasonal report on offense type and frequency. Larceny, burglary, and destruction all dip around June, whereas larceny and burglary peak at the end of the 
                         </p>
                     </div>
                 </Animator>
