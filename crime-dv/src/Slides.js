@@ -177,16 +177,15 @@ https://dev.socrata.com/foundry/data.seattle.gov/tazs-3rd5' target='_blank' clas
                     </ul>
                 </Animator>
             </ScrollPage>
-            {/* Crime Map */}
             <ScrollPage>
                 <Animator animation={SlideUp}>
                     <div className='data-vis '>
                         <figure>
                             {/* Image */}
-                            <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1000px' height='100%' src={Q2plot1} /></a>
+                            <a href='https://public.tableau.com/views/seattle_crime/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link' target="_blank"><img width='1000px' height='100%' src={Q2plot1} /></a>
                         </figure>
                     </div>
-                    <p className='tableau-text'>Click <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target='_blank' className='tableau-link'>here</a> to check out the Tableau dashboard (Highly Recommended)</p>
+                    <p className='tableau-text'>Click <a href='https://public.tableau.com/views/seattle_crime/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link' target='_blank' className='tableau-link'>here</a> to check out the Tableau dashboard (Highly Recommended)</p>
                 </Animator>
             </ScrollPage>
             {/* Conclusions/Observations */}
