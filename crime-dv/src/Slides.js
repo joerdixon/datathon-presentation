@@ -28,7 +28,7 @@ function Slides() {
             </ScrollPage>
             <ScrollPage>
                 <Animator class='wide-ani' animation={SlideRight}>
-                    <h1 className='heading'>And Seattle has more <span className='pop-text'>crime</span> then ever.</h1>
+                    <h1 className='heading'>And Seattle has more <span className='pop-text'>crime</span> than ever.</h1>
                 </Animator>
             </ScrollPage>
             <ScrollPage>
@@ -116,6 +116,21 @@ function Slides() {
                     </ul>
                 </Animator>
             </ScrollPage>
+            {/* Map Instructions */}
+            <ScrollPage>
+                <Animator animation={ZoomInScrollOut}>
+                    <h1>Using the Map</h1>
+                    <p>
+                        Click and drag to navigate, scroll outside of the container to continue the presentation.
+                        <br></br>
+                        <br></br>
+                        In the bottom left, choose the type of crime you want to explore from the dropdown menu and select a timeframe from the calendar widget. 
+                        <br></br>
+                        <br></br>
+                        Then, click on the neighborhoods of interest. The count of your selected offense will appear next to the offense dropdown menu. 
+                    </p>
+                </Animator>
+            </ScrollPage>
             {/* Crime Map */}
             <ScrollPage>
                 <Animator animation={SlideUp}>
@@ -164,7 +179,7 @@ function Slides() {
                 <div className='data-vis'>
                     <figure id='question3'>
                         {/* Image */}
-                        <a href='https://public.tableau.com/app/profile/mia.pekez/viz/Firstdashboard_16768294921540/Dashboard1' target="_blank"><img width='1000px' height='100%' src={Q2plot1} /></a>
+                        <a href='https://public.tableau.com/views/seattle_crime/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link' target="_blank"><img width='1000px' height='100%' src={Q2plot1} /></a>
                     </figure>
                     {/* Image */}
                 </div>
@@ -181,12 +196,27 @@ function Slides() {
                             Next, evaluating the top three crimes per neighborhood on a yearly basis, the most frequent types of crimes have not changed, but the amount of crime, regardless of specific offense, has increased every year.
                             <br></br>
                             <br></br>
-                            Northgate, Queen Anne, Downtown, Commercial District, and University District are reported to have the most crime over all the years. 
+                            Northgate, Queen Anne, Downtown, Commercial District, and University District are reported to have the most crime over all the years.
                             <br></br>
                             <br></br>
-                            When selecting a neighborhood, the dashboard also provides a seasonal report on offense type and frequency. Larceny, burglary, and destruction all dip around June, whereas larceny and burglary peak at the end of the 
+                            When selecting a neighborhood, the dashboard also provides a seasonal report on offense type and frequency. Larceny, burglary, and destruction all dip around June, whereas larceny and burglary peak at the end of the
                         </p>
                     </div>
+                </Animator>
+            </ScrollPage>
+            {/* Final Conclusion */}
+            <ScrollPage>
+                <Animator animation={SlideUp}>
+                    <h1>Final Thoughts</h1>
+                    <p className='text-center'>
+                        Through our data analysis and visualization on the SPD dataset, we have observed how the frequency and location of crime fluctuates in Seattle over time.
+                        <br></br>
+                        <br></br>
+                        For residents of Seattle neighborhoods, having current crime data is very helpful. It provides a crucial understanding of what is happening in their area of Seattle and what precautions should be taken to lessen the probability of these crimes happening. 
+                        <br></br>
+                        <br></br>
+                        In a city where the crime rate is growing rampantly, this awareness of frequency by location is imperative, especially when deciding to buy a house, start a business or just move to Seattle. Overall, our insights help the average Seattleite navigate the city and their neighborhood with greater safety.
+                    </p>
                 </Animator>
             </ScrollPage>
         </ScrollContainer>
