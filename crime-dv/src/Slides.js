@@ -1,4 +1,3 @@
-import { divIcon } from 'leaflet';
 import React from 'react';
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut} from "react-scroll-motion";
 
@@ -26,13 +25,13 @@ function Slides() {
                 </Animator>
             </ScrollPage>
             <ScrollPage>
-                <Animator class='wide-ani' animation={SlideRight}>
+                <Animator class='wide-ani' animation={SlideUp}>
                     <h1 className='heading'>Lets look at the <span className='pop-text'>data</span>.</h1>
                 </Animator>
             </ScrollPage>
             {/* Question 1 */}
             <ScrollPage>
-                <Animator animation={SlideUp}>
+                <Animator animation={SlideRight}>
                     <div class='question-container'>
                         <div className='question-text'>
                             <h1>How has the crime rate changed since 2011?</h1>
