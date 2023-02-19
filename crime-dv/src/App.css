@@ -11,14 +11,19 @@ h1 {
   text-align: center;
 }
 
-p {
+p, li {
   font-size: 1.5rem;
   font-family: "Poppins";
 }
 
+li {
+  padding: 10px;
+}
+
 iframe {
-  width: 100vw;
-  height: 100vh;
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
   border: none;
   z-index: 3;
 }
@@ -47,6 +52,7 @@ iframe {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: auto;
 }
 
 .conclusions {
