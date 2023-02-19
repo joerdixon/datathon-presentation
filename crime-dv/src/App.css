@@ -57,7 +57,7 @@ iframe {
   width: 90px;
   height: 35px;
   background-color: pink;
-  opacity: 80%;
+  opacity: 75%;
   color: #111;
   border-radius: 1rem;
   font-family: "Poppins";
@@ -70,7 +70,7 @@ iframe {
 }
 
 #exit-map:hover {
-  background-color: #ff99be;
+  background-color: pink;
   cursor: pointer;
   opacity: 100%;
 }

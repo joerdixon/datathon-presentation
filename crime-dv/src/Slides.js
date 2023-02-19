@@ -1,15 +1,14 @@
 import { divIcon } from 'leaflet';
 import React from 'react';
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut} from "react-scroll-motion";
 
 // Animations
 const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
-const FadeUp = batch(Fade(), Move(1, 500), Sticky());
+const SlideUpScrollUp = batch(Fade(), Move(1, 500), Sticky());
+const FadeInScrollUp = batch(Fade(), Sticky(), MoveOut(0, -200))
+const SlideRight = batch(Fade(), MoveIn(-200, 0), Sticky(), MoveOut())
+const SlideUp = batch(Fade(), MoveIn(-200, 1400), Sticky(), MoveOut())
 
-const Restart = (() => {
-    const element = document.getElementById("top")
-    element.scrollIntoView({ behavior: "smooth" });
-})
 
 
 function Slides() {
@@ -22,18 +21,18 @@ function Slides() {
                 </Animator>
             </ScrollPage>
             <ScrollPage>
-                <Animator class='wide-ani' animation={FadeUp}>
+                <Animator class='wide-ani' animation={SlideRight}>
                     <h1 className='heading'>And Seattle has more <span className='pop-text'>crime</span> then ever.</h1>
                 </Animator>
             </ScrollPage>
             <ScrollPage>
-                <Animator class='wide-ani' animation={FadeUp}>
+                <Animator class='wide-ani' animation={SlideRight}>
                     <h1 className='heading'>Lets look at the <span className='pop-text'>data</span>.</h1>
                 </Animator>
             </ScrollPage>
             {/* Question 1 */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUp}>
                     <div class='question-container'>
                         <div className='question-text'>
                             <h1>How has the crime rate changed since 2011?</h1>
@@ -43,7 +42,7 @@ function Slides() {
             </ScrollPage>
             {/* Plots */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={ZoomInScrollOut}>
                     <div className='data-vis '>
                         {/* Data Visualization */}
                         <figure>
@@ -68,7 +67,7 @@ function Slides() {
             </ScrollPage>
             {/* Takeaways */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <div className='conclusions' id='from-map'>
                         <h1 className='heading'>Takeaways:</h1>
                         <p>Covid Increased Crime</p>
@@ -79,7 +78,7 @@ function Slides() {
             </ScrollPage>
             {/* Question 2 */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <div class='question-container'>
                         <div className='question-text'>
                             <h1>How has the crime rate changed since 2008?</h1>
@@ -89,7 +88,7 @@ function Slides() {
             </ScrollPage>
             {/* Plots */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <div className='data-vis '>
                         {/* Data Visualization */}
                         <figure>
@@ -114,7 +113,7 @@ function Slides() {
             </ScrollPage>
             {/* Takeaways */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <div className='conclusions' id='from-map'>
                         <h1 className='heading'>Takeaways:</h1>
                         <p>Covid Increased Crime</p>
@@ -125,7 +124,7 @@ function Slides() {
             </ScrollPage>
             {/* Question 3 */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <div class='question-container'>
                         <div className='question-text'>
                             <h1>How has the crime rate changed since 2008?</h1>
@@ -135,7 +134,7 @@ function Slides() {
             </ScrollPage>
             {/* Plots */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <div className='data-vis '>
                         {/* Data Visualization */}
                         <figure>
@@ -160,7 +159,7 @@ function Slides() {
             </ScrollPage>
             {/* Takeaways */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <div className='conclusions' id='from-map'>
                         <h1 className='heading'>Takeaways:</h1>
                         <p>Covid Increased Crime</p>
@@ -171,9 +170,9 @@ function Slides() {
             </ScrollPage>
             {/* Map */}
             <ScrollPage>
-                <Animator animation={FadeUp}>
+                <Animator animation={SlideUpScrollUp}>
                     <a href="">
-                        <button id='exit-map' onClick={Restart}>Restart</button>
+                        <button id='exit-map'>Restart</button>
                     </a>
                     <iframe src="https://tu21897.github.io/datathon-crime-map/"></iframe>
                 </Animator>
