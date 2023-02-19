@@ -2,6 +2,7 @@ import { divIcon } from 'leaflet';
 import React from 'react';
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
+// Animations
 const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 const FadeUp = batch(Fade(), Move(1, 500), Sticky());
 
@@ -34,7 +35,7 @@ function Slides() {
                     </div>
                 </Animator>
             </ScrollPage>
-            {/* Question 2 */}
+            {/* Plots */}
             <ScrollPage>
                 <Animator animation={FadeUp}>
                     <div className='data-vis '>
@@ -59,21 +60,114 @@ function Slides() {
                     </div>
                 </Animator>
             </ScrollPage>
-            {/* Question 3*/}
+            {/* Takeaways */}
             <ScrollPage>
                 <Animator animation={FadeUp}>
-                    <div className='conclusions'>
-                        <h1 className='heading'>Conclusions:</h1>
+                    <div className='conclusions' id='from-map'>
+                        <h1 className='heading'>Takeaways:</h1>
                         <p>Covid Increased Crime</p>
                         <p>Ballard's crime increased the most</p>
                         <p>Theft rose by 300%</p>
                     </div>
                 </Animator>
             </ScrollPage>
+            {/* Question 2 */}
             <ScrollPage>
                 <Animator animation={FadeUp}>
-                    <iframe width="1600" height="900"
-                        src="https://tu21897.github.io/datathon-crime-map/">
+                    <div class='question-container'>
+                        <div className='question-text'>
+                            <h1>How has the crime rate changed since 2008?</h1>
+                        </div>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            {/* Plots */}
+            <ScrollPage>
+                <Animator animation={FadeUp}>
+                    <div className='data-vis '>
+                        {/* Data Visualization */}
+                        <figure>
+                            {/* Caption */}
+                            <p>Crimes over Time:</p>
+                            {/* Visualizaiton */}
+                            <img className='visual' src="https://via.placeholder.com/500" alt='placeholder image for data vis' />
+                        </figure>
+                        {/* Conclusions/Observations */}
+                        <div>
+                            <h1>Observations:</h1>
+                            <ul>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                            </ul>
+                        </div>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            {/* Takeaways */}
+            <ScrollPage>
+                <Animator animation={FadeUp}>
+                    <div className='conclusions' id='from-map'>
+                        <h1 className='heading'>Takeaways:</h1>
+                        <p>Covid Increased Crime</p>
+                        <p>Ballard's crime increased the most</p>
+                        <p>Theft rose by 300%</p>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            {/* Question 3 */}
+            <ScrollPage>
+                <Animator animation={FadeUp}>
+                    <div class='question-container'>
+                        <div className='question-text'>
+                            <h1>How has the crime rate changed since 2008?</h1>
+                        </div>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            {/* Plots */}
+            <ScrollPage>
+                <Animator animation={FadeUp}>
+                    <div className='data-vis '>
+                        {/* Data Visualization */}
+                        <figure>
+                            {/* Caption */}
+                            <p>Crimes over Time:</p>
+                            {/* Visualizaiton */}
+                            <img className='visual' src="https://via.placeholder.com/500" alt='placeholder image for data vis' />
+                        </figure>
+                        {/* Conclusions/Observations */}
+                        <div>
+                            <h1>Observations:</h1>
+                            <ul>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Ballard saw the most sharp increase in crime</li>
+                            </ul>
+                        </div>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            {/* Takeaways */}
+            <ScrollPage>
+                <Animator animation={FadeUp}>
+                    <div className='conclusions' id='from-map'>
+                        <h1 className='heading'>Takeaways:</h1>
+                        <p>Covid Increased Crime</p>
+                        <p>Ballard's crime increased the most</p>
+                        <p>Theft rose by 300%</p>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            {/* Map */}
+            <ScrollPage>
+                <Animator animation={FadeUp}>
+                    <button id='exit-map' href='#from-map'>Back to Conclusions</button>
+                    <iframe src="https://tu21897.github.io/datathon-crime-map/">
                     </iframe>
                 </Animator>
             </ScrollPage>

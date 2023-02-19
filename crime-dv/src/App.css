@@ -1,4 +1,5 @@
 /* Element Styling */
+
 body {
   background-color: #111;
   color: white;
@@ -13,6 +14,13 @@ h1 {
 p {
   font-size: 1.5rem;
   font-family: "Poppins";
+}
+
+iframe {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  z-index: 3;
 }
 
 /* Class Styling */
@@ -43,4 +51,23 @@ p {
 
 .conclusions {
   text-align: left;
+}
+
+#exit-map {
+  width: 10vw;
+  height: 10vh; 
+  font-size: 1.5rem;
+  background-color: #111;
+  color: white;
+  border-radius: 1rem;
+  font-family: "Poppins";
+  z-index: 2;
+  position: absolute;
+  top: 85vh;
+  right: 3vw;
+}
+
+#exit-map:hover {
+  color: #111;
+  background-color: pink;
 }
