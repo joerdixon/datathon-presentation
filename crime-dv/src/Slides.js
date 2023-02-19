@@ -6,11 +6,17 @@ import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Mo
 const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 const FadeUp = batch(Fade(), Move(1, 500), Sticky());
 
+const Restart = (() => {
+    const element = document.getElementById("top")
+    element.scrollIntoView({ behavior: "smooth" });
+})
+
+
 function Slides() {
     return (
         <ScrollContainer snap='mandatory'>
             {/* Introduction and Objective */}
-            <ScrollPage>
+            <ScrollPage id="top">
                 <Animator class='wide-ani' animation={ZoomInScrollOut}>
                     <h1 className='heading'>We have more data then ever on crime in <span className='pop-text'>Seattle</span></h1>
                 </Animator>
@@ -30,7 +36,7 @@ function Slides() {
                 <Animator animation={FadeUp}>
                     <div class='question-container'>
                         <div className='question-text'>
-                            <h1>How has the crime rate changed since 2008?</h1>
+                            <h1>How has the crime rate changed since 2011?</h1>
                         </div>
                     </div>
                 </Animator>
@@ -50,11 +56,11 @@ function Slides() {
                         <div>
                             <h1>Observations:</h1>
                             <ul>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
                             </ul>
                         </div>
                     </div>
@@ -66,7 +72,7 @@ function Slides() {
                     <div className='conclusions' id='from-map'>
                         <h1 className='heading'>Takeaways:</h1>
                         <p>Covid Increased Crime</p>
-                        <p>Ballard's crime increased the most</p>
+                        <p>Seattle's crime increased the most</p>
                         <p>Theft rose by 300%</p>
                     </div>
                 </Animator>
@@ -96,11 +102,11 @@ function Slides() {
                         <div>
                             <h1>Observations:</h1>
                             <ul>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
                             </ul>
                         </div>
                     </div>
@@ -112,7 +118,7 @@ function Slides() {
                     <div className='conclusions' id='from-map'>
                         <h1 className='heading'>Takeaways:</h1>
                         <p>Covid Increased Crime</p>
-                        <p>Ballard's crime increased the most</p>
+                        <p>Seattle's crime increased the most</p>
                         <p>Theft rose by 300%</p>
                     </div>
                 </Animator>
@@ -142,11 +148,11 @@ function Slides() {
                         <div>
                             <h1>Observations:</h1>
                             <ul>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
-                                <li>Ballard saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
+                                <li>Seattle saw the most sharp increase in crime</li>
                             </ul>
                         </div>
                     </div>
@@ -158,7 +164,7 @@ function Slides() {
                     <div className='conclusions' id='from-map'>
                         <h1 className='heading'>Takeaways:</h1>
                         <p>Covid Increased Crime</p>
-                        <p>Ballard's crime increased the most</p>
+                        <p>Seattle's crime increased the most</p>
                         <p>Theft rose by 300%</p>
                     </div>
                 </Animator>
@@ -166,9 +172,10 @@ function Slides() {
             {/* Map */}
             <ScrollPage>
                 <Animator animation={FadeUp}>
-                    <button id='exit-map' href='#from-map'>Back to Conclusions</button>
-                    <iframe src="https://tu21897.github.io/datathon-crime-map/">
-                    </iframe>
+                    <a href="">
+                        <button id='exit-map' onClick={Restart}>Restart</button>
+                    </a>
+                    <iframe src="https://tu21897.github.io/datathon-crime-map/"></iframe>
                 </Animator>
             </ScrollPage>
         </ScrollContainer>
