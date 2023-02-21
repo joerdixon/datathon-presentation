@@ -11,7 +11,8 @@ h1 {
   text-align: center;
 }
 
-p, li {
+p,
+li {
   font-size: 1.5rem;
   font-family: "Poppins";
 }
@@ -63,7 +64,7 @@ iframe {
   text-align: center;
   width: auto;
   margin: 0 auto;
-} 
+}
 
 .conclusions {
   text-align: left;
@@ -71,6 +72,17 @@ iframe {
 
 .text-center {
   text-align: center;
+}
+
+.credits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.credits p {
+  padding: 40px;
+  font-size: 1.8rem;
 }
 
 #question3 {

@@ -223,6 +223,19 @@ https://dev.socrata.com/foundry/data.seattle.gov/tazs-3rd5' target='_blank' clas
                     </p>
                 </Animator>
             </ScrollPage>
+            {/* Credits */}
+            <ScrollPage>
+                <Animator animation={SlideUpScrollUp}>
+                    <h1>Created By</h1>
+                    <div className='credits'>
+                        <p>Mia Pekez</p>
+                        <p>Joe Dixon</p>
+                        <p>Tu Nguyun</p>
+                        <p>Lily Shen</p>
+                        <p>Andrea Danilla</p>
+                    </div>
+                </Animator>
+            </ScrollPage>
         </ScrollContainer>
     )
 };
