@@ -9,11 +9,11 @@ Find the deployed version [here!](https://elegant-alpaca-09fa58.netlify.app/)
 #### Interactive Map Data: https://dev.socrata.com/foundry/data.seattle.gov/tazs-3rd5
 
 ### Team Members
-[Lily Shen](https://github.com/lil-ds), Data Anaylisis + Visualization
+[Lily Shen](https://github.com/lil-ds), Data Analysis + Visualization
 
-[Mia Pekez](https://github.com/miapkz), Data Anaylisis + Visualization
+[Mia Pekez](https://github.com/miapkz), Data Analysis + Visualization
 
-[Andrea Danila](https://github.com/andrea-dan), Data Anaylisis + Visualization + Cleaning
+[Andrea Danila](https://github.com/andrea-dan), Data Analysis + Visualization + Cleaning
 
 [Tu Nguyen](https://github.com/tu21897), Data Visualization + Web Dev + Cleaning
 
