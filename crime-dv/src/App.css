@@ -13,7 +13,7 @@ h1 {
 
 p,
 li {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: "Poppins";
 }
 
@@ -91,6 +91,8 @@ iframe {
   display: flex;
   justify-content: space-around;
 }
+
+/* Restart Button */
 
 #exit-map {
   width: 90px;

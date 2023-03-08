@@ -19,7 +19,7 @@ const Q1Tableau = "https://public.tableau.com/app/profile/mia.pekez/viz/Firstdas
 
 function Slides() {
     return (
-        <ScrollContainer snap='mandatory'>
+        <ScrollContainer snap='none'>
             {/* Introduction and Objective */}
             <ScrollPage id="top">
                 <Animator class='wide-ani' animation={SlideUpScrollUp}>
